@@ -11,17 +11,18 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var leftArrow: UIImageView!
-    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
+    //This two references are for the side menu.
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var MenuView: UIView!
     var menuShowing = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addNavBarImage()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //This line changes the background of the main view.
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background.png")!)
-        //MenuView.backgroundColor = UIColor(patternImage: UIImage(named: "Menu Slider.png")!)
         
         
         //These 2 lines are used to give the menu sider a shadow
@@ -31,26 +32,20 @@ class ViewController: UIViewController {
 
 
     @IBAction func openMenu(_ sender: Any) {
-        
+        //helper method for the side menu bar.
         if(menuShowing){
             leadingConstraint.constant = -250
         }
         else{
-            
             leadingConstraint.constant = 0
-            
-            
             UIView.animate(withDuration: 0.3, animations: {self.view.layoutIfNeeded()})
-           // self.view.bringSubviewToFront(_, view: UIView)
-            
         }
-    
         menuShowing = !menuShowing
-        
     }
     
+    
     func addNavBarImage(){
-        
+        //This method adds the navigation bar images.
         let navController = navigationController!
         let image = #imageLiteral(resourceName: "3to1 logo white")
         let imageView = UIImageView(image:image)
