@@ -9,6 +9,7 @@ import UIKit
 
 class QuestionController: UIViewController {
 
+    var userOutput: String = "TimeStamp  Choice \n"
     struct Choice {
         //A choice struct for users' choices.
         var stamp: Int?
@@ -40,6 +41,7 @@ class QuestionController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getJson()
+        startTimeSession()
         // Do any additional setup after loading the view.
     }
     
@@ -63,81 +65,76 @@ class QuestionController: UIViewController {
     }
     
     //***********************Time Section*************************************
-    
-    @IBOutlet weak var countText: UITextField!
-    @IBOutlet weak var lbl: UILabel!
-    var time = 0
-    var timer = Timer()
-    
-    
-    @IBAction func start(_ sender: Any) {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(QuestionController.action), userInfo: nil, repeats: true)
-    }
-    
-    @IBAction func countDown(_ sender: Any) {
-        time = Int(countText.text!)!
-        //missButton.isEnabled = true
-        //makeButton.isEnabled = true
-        
+    func startTimeSession(){
+        //timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(QuestionController.action), userInfo: nil, repeats: true)
+        time = 10
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(QuestionController.countdonwAction), userInfo: nil, repeats: true)
     }
+    
+    var time = 0
+    var timer = Timer()
+    @IBOutlet weak var lbl: UILabel!
     
     
     @objc func countdonwAction(){
         if(time == 0){
+            lbl.text = "0"
             timer.invalidate()
             sessionOver()
         }
         else{
             time -= 1
             lbl.text = String (time)
+            changeQuesContent()
         }
     }
     
-    @objc func action (){
-        time += 1
-        lbl.text = String(time)
-    }
     
     func sessionOver(){
         for item in choiceList {
-            print("here")
-            print(item.stamp!, terminator:"")
-            
+            userOutput = userOutput + String(item.stamp!) + "                   "
             if(item.make == true){
-                print("  make")
+                userOutput = userOutput + "A\n"
             }
             else{
-                print("  miss")
+                userOutput = userOutput + "B\n"
             }
         }
-        print("felse*******************")
         choiceList.removeAll()
-        //missButton.isEnabled = false
-        //makeButton.isEnabled = false
+        
+        
+        //Segue to the next screen.
+        self.performSegue(withIdentifier: "resultSegue", sender: self)
     }
 
-}
+
 //************************Timer Section Over*****************************//
 
-//@IBAction func clickMake(_ sender: Any) {
-//    //intList.append(1)
-//    choiceList.append(Choice(stamp: time, make: true))
-//    //Choices.stamp.append(time)
-//
-//    //print(time)
-//}
-//
-//@IBAction func clickMiss(_ sender: Any) {
-//    //intList.append(0)
-//}
+    @IBAction func clickA(_ sender: Any) {
+        choiceList.append(Choice(stamp: time, make: true))
+    }
+
+    @IBAction func clickB(_ sender: Any) {
+        choiceList.append(Choice(stamp: time, make: false))
+    }
 
 
 
     
 
+//    override func prepare(segue: UIStoryboardSegue, sender: AnyObject?) {
+//
+//
+//    }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "resultSegue" {
+            if let destinationVC = segue.destination as? ResultController {
+                //Send the content to resultController
+                destinationVC.content = userOutput
+            }
+        }
+    }
 
     //@IBOutlet weak var missButton: UIButton!
     //@IBOutlet weak var makeButton: UIButton!
@@ -148,18 +145,69 @@ class QuestionController: UIViewController {
 //        missButton.isEnabled = false
 //        makeButton.isEnabled = false
 
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "ShowC" {
+//            if let destinationVC = segue.destinationViewController as? OtherViewController {
+//                destinationVC.numberToDisplay = counter
+//            }
+//        }
+//
+//    }
 
-
-
+    @IBOutlet weak var QLabel: UILabel!
+    @IBOutlet weak var ALabel: UILabel!
+    @IBOutlet weak var BLabel: UILabel!
+    let Q1 = "Google or Microsoft?"
+    let Q2 = "Superman or Batman?"
+    let Q3 = "Pie or cake?"
+    let Q4 = "Marval or DC?"
+    let Q5 = "Tony Stark or Steve Rogers?"
+    let A1 = "Google"
+    let A2 = "Superman"
+    let A3 = "Pie"
+    let A4 = "Marval"
+    let A5 = "Tony Stark"
+    let B1 = "Microsoft"
+    let B2 = "Batman"
+    let B3 = "cake"
+    let B4 = "DC"
+    let B5 = "Steve Rogers"
     
-
+    
+    func changeQuesContent(){
+        if(time == 9){
+            QLabel.text = Q1
+            ALabel.text = A1
+            BLabel.text = B1
+        }
+        else if(time == 7){
+            QLabel.text = Q2
+            ALabel.text = A2
+            BLabel.text = B2
+        }
+        else if(time == 5){
+            QLabel.text = Q3
+            ALabel.text = A3
+            BLabel.text = B3
+        }
+        else if(time == 3){
+            QLabel.text = Q4
+            ALabel.text = A4
+            BLabel.text = B4
+        }
+        else if(time == 1){
+            QLabel.text = Q5
+            ALabel.text = A5
+            BLabel.text = B5
+        }
+    }
     
 
     
     //************************Database*****************************//
-    
-    
-    
+
+
+}
     
     
 

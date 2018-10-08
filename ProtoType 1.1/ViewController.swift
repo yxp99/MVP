@@ -31,17 +31,17 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func openMenu(_ sender: Any) {
-        //helper method for the side menu bar.
-        if(menuShowing){
-            leadingConstraint.constant = -250
-        }
-        else{
-            leadingConstraint.constant = 0
-            UIView.animate(withDuration: 0.3, animations: {self.view.layoutIfNeeded()})
-        }
-        menuShowing = !menuShowing
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     func addNavBarImage(){
@@ -61,6 +61,19 @@ class ViewController: UIViewController {
         navigationItem.titleView = imageView
     }
     
-
+    
+    //************************ helper method for the side menu bar *****************************//
+    @IBAction func openMenu(_ sender: Any) {
+        
+        if(menuShowing){
+            leadingConstraint.constant = -250
+        }
+        else{
+            leadingConstraint.constant = 0
+            UIView.animate(withDuration: 0.3, animations: {self.view.layoutIfNeeded()})
+        }
+        menuShowing = !menuShowing
+    }
+    //******************************************************************************************//
 }
 
