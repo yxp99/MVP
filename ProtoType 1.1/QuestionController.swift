@@ -9,7 +9,7 @@ import UIKit
 
 class QuestionController: UIViewController {
 
-    var userOutput: String = "TimeStamp  Choice \n"
+    var userOutput: String = "TimeStamp  Choice  Correctness\n"
     struct Choice {
         //A choice struct for users' choices.
         var stamp: Int?
@@ -24,47 +24,88 @@ class QuestionController: UIViewController {
     var choiceList = [Choice]()
     
     
-    struct Question: Codable{
-        // A question struct for the questions.
-        let questionName : String
-        let questionID : Int
-        let content: String
-        enum CodingKeys: String, CodingKey {
-            case questionName = "name"
-            case questionID = "id"
-            case content = "content"
-        }
-        
+//    struct Question: Codable{
+//        // A question struct for the questions.
+//        let questionName : String
+//        let questionID : Int
+//        let content: String
+//        enum CodingKeys: String, CodingKey {
+//            case questionName = "name"
+//            case questionID = "id"
+//            case content = "content"
+//        }
+//
+//    }
+    
+    struct Question: Decodable {
+        let QID: Int?
+        let Question: String?
+        let Answer: Int?
     }
     
+    var questionList = [String]()
+    var answerList = [Bool]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getJson()
-        startTimeSession()
-        // Do any additional setup after loading the view.
-    }
-    
-    func getJson(){
-        guard let url = URL(string: "http://cwrucourse.fun/3to1/searchTest2.php") else { return }
         
-        let session = URLSession.shared
-        session.dataTask(with: url) { (data, response, error) in
-            
-            if let data = data {
-                print(data)
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
-                } catch {
-                    print(error)
-                }
-                
-            }
-            }.resume()
+        //This method is used to get and parse the Json file from the server.
+        getJson()
+
+        //Start a time session for the user to answer questions
+        startTimeSession()
+        
     }
     
-    //***********************Time Section*************************************
+    
+    //***********************Get an Parse Json*************************************//
+    func getJson(){
+//        guard let url = URL(string: "http://cwrucourse.fun/3to1/searchQuestion.php") else { return }
+//
+//        let session = URLSession.shared
+//        session.dataTask(with: url) { (data, response, error) in
+//
+//            if let data = data {
+//                print(data)
+//                do {
+//                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+//                    print(json)
+//                } catch {
+//                    print(error)
+//                }
+//
+//            }
+//            }.resume()
+        let jsonUrlString = "http://cwrucourse.fun/3to1/searchQuestion.php"
+        guard let url = URL(string: jsonUrlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+            
+            guard let data = data else { return }
+            
+            do {
+                let questions = try JSONDecoder().decode([Question].self, from: data)
+                for item in questions {
+                    print(item.Question!)
+                    self.questionList.append(item.Question!)
+                    if(item.Answer! == 0){
+                        self.answerList.append(true)
+                    }
+                    else{
+                        self.answerList.append(false)
+                    }
+                }
+            }
+            catch let jsonErr {
+                print("Error serializing json:", jsonErr)
+            }
+        }.resume()
+    }
+    //***********************Get an Parse Json End*************************************//
+    
+    
+    
+    //***********************Time Section*************************************//
     func startTimeSession(){
         //timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(QuestionController.action), userInfo: nil, repeats: true)
         time = 10
@@ -94,10 +135,18 @@ class QuestionController: UIViewController {
         for item in choiceList {
             userOutput = userOutput + String(item.stamp!) + "                   "
             if(item.make == true){
-                userOutput = userOutput + "A\n"
+                userOutput = userOutput + "YES" + "        "
             }
             else{
-                userOutput = userOutput + "B\n"
+                userOutput = userOutput + "NO" + "         "
+            }
+            
+            
+            if(item.make == self.answerList.removeFirst()){
+                userOutput = userOutput + "corret\n"
+            }
+            else{
+                userOutput = userOutput + "Wrong\n"
             }
         }
         choiceList.removeAll()
@@ -120,13 +169,8 @@ class QuestionController: UIViewController {
 
 
 
-    
 
-//    override func prepare(segue: UIStoryboardSegue, sender: AnyObject?) {
-//
-//
-//    }
-
+//************************Segue function to the result page*****************************//
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "resultSegue" {
             if let destinationVC = segue.destination as? ResultController {
@@ -136,70 +180,42 @@ class QuestionController: UIViewController {
         }
     }
 
-    //@IBOutlet weak var missButton: UIButton!
-    //@IBOutlet weak var makeButton: UIButton!
-    
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        missButton.isEnabled = false
-//        makeButton.isEnabled = false
-
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "ShowC" {
-//            if let destinationVC = segue.destinationViewController as? OtherViewController {
-//                destinationVC.numberToDisplay = counter
-//            }
-//        }
-//
-//    }
 
     @IBOutlet weak var QLabel: UILabel!
-    @IBOutlet weak var ALabel: UILabel!
-    @IBOutlet weak var BLabel: UILabel!
-    let Q1 = "Google or Microsoft?"
-    let Q2 = "Superman or Batman?"
-    let Q3 = "Pie or cake?"
-    let Q4 = "Marval or DC?"
-    let Q5 = "Tony Stark or Steve Rogers?"
-    let A1 = "Google"
-    let A2 = "Superman"
-    let A3 = "Pie"
-    let A4 = "Marval"
-    let A5 = "Tony Stark"
-    let B1 = "Microsoft"
-    let B2 = "Batman"
-    let B3 = "cake"
-    let B4 = "DC"
-    let B5 = "Steve Rogers"
+//    let Q1 = "Google or Microsoft?"
+//    let Q2 = "Superman or Batman?"
+//    let Q3 = "Pie or cake?"
+//    let Q4 = "Marval or DC?"
+//    let Q5 = "Tony Stark or Steve Rogers?"
+//    let A1 = "Google"
+//    let A2 = "Superman"
+//    let A3 = "Pie"
+//    let A4 = "Marval"
+//    let A5 = "Tony Stark"
+//    let B1 = "Microsoft"
+//    let B2 = "Batman"
+//    let B3 = "cake"
+//    let B4 = "DC"
+//    let B5 = "Steve Rogers"
     
     
     func changeQuesContent(){
-        if(time == 9){
-            QLabel.text = Q1
-            ALabel.text = A1
-            BLabel.text = B1
+        if(time == 8){
+            QLabel.text = questionList.removeFirst()
         }
-        else if(time == 7){
-            QLabel.text = Q2
-            ALabel.text = A2
-            BLabel.text = B2
-        }
+//        else if(time == 7){
+//            QLabel.text = Q2
+//
+//        }
         else if(time == 5){
-            QLabel.text = Q3
-            ALabel.text = A3
-            BLabel.text = B3
+            QLabel.text = questionList.removeFirst()
         }
         else if(time == 3){
-            QLabel.text = Q4
-            ALabel.text = A4
-            BLabel.text = B4
+            QLabel.text = questionList.removeFirst()
         }
-        else if(time == 1){
-            QLabel.text = Q5
-            ALabel.text = A5
-            BLabel.text = B5
-        }
+//        else if(time == 1){
+//            QLabel.text = Q5
+//        }
     }
     
 

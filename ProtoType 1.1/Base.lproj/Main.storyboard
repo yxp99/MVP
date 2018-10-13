@@ -824,26 +824,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMZ-HH-uvZ">
-                                <rect key="frame" x="86" y="231" width="53" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="A"/>
-                                <connections>
-                                    <action selector="clickA:" destination="DWE-me-Lpn" eventType="touchUpInside" id="Bh8-hQ-h9e"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyi-uo-uje">
-                                <rect key="frame" x="86" y="402" width="53" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="B"/>
-                                <connections>
-                                    <action selector="clickB:" destination="DWE-me-Lpn" eventType="touchUpInside" id="cVM-o8-CpX"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3a-DY-zHz">
                                 <rect key="frame" x="93" y="128" width="188" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -851,20 +831,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJq-q1-3kI">
-                                <rect key="frame" x="176" y="409" width="118" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMZ-HH-uvZ">
+                                <rect key="frame" x="182" y="221" width="53" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRJ-mz-VBW">
-                                <rect key="frame" x="176" y="238" width="116" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="YES"/>
+                                <connections>
+                                    <action selector="clickA:" destination="DWE-me-Lpn" eventType="touchUpInside" id="Bh8-hQ-h9e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyi-uo-uje">
+                                <rect key="frame" x="182" y="393" width="53" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="NO"/>
+                                <connections>
+                                    <action selector="clickB:" destination="DWE-me-Lpn" eventType="touchUpInside" id="cVM-o8-CpX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -880,8 +866,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="score card unselected-Cropped" id="SuW-5A-UpX"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="ALabel" destination="cRJ-mz-VBW" id="eZF-f4-2gj"/>
-                        <outlet property="BLabel" destination="DJq-q1-3kI" id="r0U-Fd-G4i"/>
                         <outlet property="QLabel" destination="g3a-DY-zHz" id="PTR-OZ-hbm"/>
                         <outlet property="lbl" destination="5ZW-nt-6Tg" id="sXj-jC-EEH"/>
                         <segue destination="mB8-BR-Goj" kind="show" identifier="resultSegue" id="N7e-nm-pxu"/>
@@ -936,8 +920,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1i3-tK-oRK"/>
-        <segue reference="SAh-ws-tDE"/>
-        <segue reference="Z9P-iW-vGF"/>
+        <segue reference="qVb-eY-Mt7"/>
+        <segue reference="pbc-ZW-2Re"/>
         <segue reference="ZgS-ne-bjE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
