@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var leftArrow: UIImageView!
     
-    //This two references are for the side menu.
+    //This two references are for the side menu.+
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var MenuView: UIView!
     var menuShowing = false
