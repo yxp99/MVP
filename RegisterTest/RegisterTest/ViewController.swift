@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBAction func buttonRegister(_ sender: UIButton) {
         
         //creating parameters for the post request
-        let parameters: Parameters=[
+        let param: Parameters=[
             "username":textFieldUsername.text!,
             "password":textFieldPassword.text!,
             "email":textFieldEmail.text!,
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         ]
         
         //Sending http post request
-        Alamofire.request(URL_USER_REGISTER, method: .post, parameters: parameters).responseJSON
+        Alamofire.request(URL_USER_REGISTER, method: .post, parameters: param).responseJSON
             {
                 response in
                 //printing response
