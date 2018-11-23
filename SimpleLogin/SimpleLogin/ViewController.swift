@@ -1,21 +1,20 @@
+//
+//  ViewController.swift
+//  SimpleLogin
+//
+//  Created by cj on 11/23/18.
+//  Copyright © 2018 3to1. All rights reserved.
+//
+
 import UIKit
 
-class ViewController: UIViewController
-{
-    
-    // The textfield outlets
-    
-    @IBOutlet weak var item1: UITextField!
-    @IBOutlet weak var item2: UITextField!
-    @IBOutlet weak var item3: UITextField!
-    @IBOutlet weak var item4: UITextField!
-    @IBOutlet weak var item5: UITextField!
-    
+class ViewController: UIViewController {
 
-    // the button action function
-    @IBAction func uploadData(_ sender: Any)
-    {
-        let url = NSURL(string: "http://cwrucourse.fun/3to1/Connection/receive.php") // locahost MAMP - change to point to your database server
+    @IBOutlet weak var userText: UITextField!
+    @IBOutlet weak var passText: UITextField!
+ 
+    @IBAction func uploadData(_ sender: Any) {
+        let url = NSURL(string: "http://cwrucourse.fun/3to1/Connection/login.php") // locahost MAMP - change to point to your database server
         
         var request = URLRequest(url: url! as URL)
         request.httpMethod = "POST"
@@ -24,9 +23,8 @@ class ViewController: UIViewController
         
         // the POST string has entries separated by &
         
-        dataString = dataString + "&username=\(item1.text!)" // add items as name and value
-        dataString = dataString + "&email=\(item2.text!)"
-        dataString = dataString + "&password=\(item3.text!)"
+        dataString = dataString + "&username=\(userText.text!)" // add items as name and value
+        dataString = dataString + "&password=\(passText.text!)"
         //dataString = dataString + "&item4=\(item4.text!)"
         //dataString = dataString + "&item5=\(item5.text!)"
         
@@ -49,7 +47,7 @@ class ViewController: UIViewController
                     
                     DispatchQueue.main.async
                         {
-                            let alert = UIAlertController(title: "Upload Didn't Work?", message: "Looks like the connection to the server didn't work.  Do you have Internet access?", preferredStyle: .alert)
+                            let alert = UIAlertController(title: "Login Didn't Work?", message: "Looks like the connection to the server didn't work.  Do you have Internet access?", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                     }
@@ -59,6 +57,7 @@ class ViewController: UIViewController
                     if let unwrappedData = data {
                         
                         let returnedData = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue) // Response from web server hosting the database
+                        print(returnedData!)
                         
                         if returnedData == "1" // insert into database worked
                         {
@@ -67,7 +66,7 @@ class ViewController: UIViewController
                             
                             DispatchQueue.main.async
                                 {
-                                    let alert = UIAlertController(title: "Upload OK?", message: "Looks like the upload and insert into the database worked.", preferredStyle: .alert)
+                                    let alert = UIAlertController(title: "Login OK?", message: "Looks like the upload and insert into the database worked.", preferredStyle: .alert)
                                     alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                                     self.present(alert, animated: true, completion: nil)
                             }
@@ -91,15 +90,11 @@ class ViewController: UIViewController
         }
     }
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
+
 }
+
