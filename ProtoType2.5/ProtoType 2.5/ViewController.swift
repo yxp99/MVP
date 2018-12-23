@@ -21,28 +21,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         addNavBarImage()
         
-        //This line changes the background of the main view.
+        //Changes the background of the main view.
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background.png")!)
         
         
-        //These 2 lines are used to give the menu sider a shadow
+        //Give the menu sider a shadow
         MenuView.layer.shadowOpacity = 1
         MenuView.layer.shadowRadius = 6
     }
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     func addNavBarImage(){
         //This method adds the navigation bar images.
