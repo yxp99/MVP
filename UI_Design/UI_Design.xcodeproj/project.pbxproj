@@ -15,6 +15,7 @@
 		2388B1E221CEE22200E87667 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2388B1E121CEE22200E87667 /* SWRevealViewController.m */; };
 		2388B1E421CEE56700E87667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388B1E321CEE56700E87667 /* ViewController.swift */; };
 		23BBC79221CF537300F9A788 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BBC79121CF537300F9A788 /* TableViewController.swift */; };
+		8653111921D2D4AF009B3C49 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653111821D2D4AF009B3C49 /* QuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2388B1E121CEE22200E87667 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2388B1E321CEE56700E87667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23BBC79121CF537300F9A788 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		8653111821D2D4AF009B3C49 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				23BBC79121CF537300F9A788 /* TableViewController.swift */,
 				2388B1D121CED8B700E87667 /* Main.storyboard */,
 				2388B1D421CED8BB00E87667 /* Assets.xcassets */,
+				8653111821D2D4AF009B3C49 /* QuestionViewController.swift */,
 				2388B1D621CED8BB00E87667 /* LaunchScreen.storyboard */,
 				2388B1E021CEE22100E87667 /* SWRevealViewController.h */,
 				2388B1E121CEE22200E87667 /* SWRevealViewController.m */,
@@ -151,6 +154,7 @@
 			files = (
 				2388B1E421CEE56700E87667 /* ViewController.swift in Sources */,
 				2388B1CE21CED8B700E87667 /* AppDelegate.swift in Sources */,
+				8653111921D2D4AF009B3C49 /* QuestionViewController.swift in Sources */,
 				2388B1E221CEE22200E87667 /* SWRevealViewController.m in Sources */,
 				23BBC79221CF537300F9A788 /* TableViewController.swift in Sources */,
 				230386B621CF4DF600571A18 /* addBackground.swift in Sources */,
