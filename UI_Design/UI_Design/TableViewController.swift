@@ -14,7 +14,7 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
 
         //Changes the background of the main view.
-        //self.view.addBackground(imageName: "MenuSlider.png")
+        //self.view.addBackground(imageName: "MenuSlider2.png")
         
         //Remove Separator lines
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
@@ -26,6 +26,12 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        let backgroundImage = UIImage(named: "MenuSlider2.png")
+        let imageView = UIImageView(image: backgroundImage)
+        self.tableView.backgroundView = imageView
+        //UITableViewCell. = .clearColor()
+        
     }
 
     // MARK: - Table view data source

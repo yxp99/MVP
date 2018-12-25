@@ -16,6 +16,7 @@
 		2388B1E421CEE56700E87667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388B1E321CEE56700E87667 /* ViewController.swift */; };
 		23BBC79221CF537300F9A788 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BBC79121CF537300F9A788 /* TableViewController.swift */; };
 		8653111921D2D4AF009B3C49 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653111821D2D4AF009B3C49 /* QuestionViewController.swift */; };
+		8653111B21D2E006009B3C49 /* PlainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653111A21D2E006009B3C49 /* PlainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2388B1E321CEE56700E87667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23BBC79121CF537300F9A788 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8653111821D2D4AF009B3C49 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		8653111A21D2E006009B3C49 /* PlainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				230386B521CF4DF600571A18 /* addBackground.swift */,
 				2388B1CD21CED8B700E87667 /* AppDelegate.swift */,
 				23BBC79121CF537300F9A788 /* TableViewController.swift */,
+				8653111A21D2E006009B3C49 /* PlainViewController.swift */,
 				2388B1D121CED8B700E87667 /* Main.storyboard */,
 				2388B1D421CED8BB00E87667 /* Assets.xcassets */,
 				8653111821D2D4AF009B3C49 /* QuestionViewController.swift */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2388B1E421CEE56700E87667 /* ViewController.swift in Sources */,
+				8653111B21D2E006009B3C49 /* PlainViewController.swift in Sources */,
 				2388B1CE21CED8B700E87667 /* AppDelegate.swift in Sources */,
 				8653111921D2D4AF009B3C49 /* QuestionViewController.swift in Sources */,
 				2388B1E221CEE22200E87667 /* SWRevealViewController.m in Sources */,
