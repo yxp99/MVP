@@ -14,28 +14,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Set up the side menu animation.
         sideMenu()
-        // Do any additional setup after loading the view.
+        
+        //Changes the background of the main view.
+        self.view.addBackground(imageName: "Background.png")
+        
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     func sideMenu(){
-        
+        //Helper function for the sideMenu animation. NOTHING SHOULD BE CHANGED IN THIS FUNCTION.
         if revealViewController() != nil{
             
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            revealViewController()?.rearViewRevealWidth = 275
+            revealViewController()?.rearViewRevealWidth = 150
+            //revealViewController()?.view.addBackground(imageName: "MenuSlider.png")
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }

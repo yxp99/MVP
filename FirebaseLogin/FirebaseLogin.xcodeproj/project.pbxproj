@@ -7,33 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		230386B621CF4DF600571A18 /* addBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230386B521CF4DF600571A18 /* addBackground.swift */; };
-		2388B1CE21CED8B700E87667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388B1CD21CED8B700E87667 /* AppDelegate.swift */; };
-		2388B1D321CED8B700E87667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2388B1D121CED8B700E87667 /* Main.storyboard */; };
-		2388B1D521CED8BB00E87667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2388B1D421CED8BB00E87667 /* Assets.xcassets */; };
-		2388B1D821CED8BB00E87667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2388B1D621CED8BB00E87667 /* LaunchScreen.storyboard */; };
-		2388B1E221CEE22200E87667 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2388B1E121CEE22200E87667 /* SWRevealViewController.m */; };
-		2388B1E421CEE56700E87667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388B1E321CEE56700E87667 /* ViewController.swift */; };
-		23BBC79221CF537300F9A788 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BBC79121CF537300F9A788 /* TableViewController.swift */; };
+		23FA937A21D027AF0053B128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FA937921D027AF0053B128 /* AppDelegate.swift */; };
+		23FA937C21D027AF0053B128 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FA937B21D027AF0053B128 /* ViewController.swift */; };
+		23FA937F21D027AF0053B128 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FA937D21D027AF0053B128 /* Main.storyboard */; };
+		23FA938121D027B60053B128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23FA938021D027B60053B128 /* Assets.xcassets */; };
+		23FA938421D027B60053B128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FA938221D027B60053B128 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		230386B521CF4DF600571A18 /* addBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addBackground.swift; sourceTree = "<group>"; };
-		2388B1CA21CED8B700E87667 /* UI_Design.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UI_Design.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2388B1CD21CED8B700E87667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2388B1D221CED8B700E87667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2388B1D421CED8BB00E87667 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2388B1D721CED8BB00E87667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2388B1D921CED8BB00E87667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2388B1DF21CEE20F00E87667 /* UI_Design-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UI_Design-Bridging-Header.h"; sourceTree = "<group>"; };
-		2388B1E021CEE22100E87667 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		2388B1E121CEE22200E87667 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		2388B1E321CEE56700E87667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		23BBC79121CF537300F9A788 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		23FA937621D027AF0053B128 /* FirebaseLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23FA937921D027AF0053B128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23FA937B21D027AF0053B128 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23FA937E21D027AF0053B128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23FA938021D027B60053B128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23FA938321D027B60053B128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23FA938521D027B60053B128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2388B1C721CED8B700E87667 /* Frameworks */ = {
+		23FA937321D027AF0053B128 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,77 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2388B1C121CED8B700E87667 = {
+		23FA936D21D027AF0053B128 = {
 			isa = PBXGroup;
 			children = (
-				2388B1CC21CED8B700E87667 /* UI_Design */,
-				2388B1CB21CED8B700E87667 /* Products */,
+				23FA937821D027AF0053B128 /* FirebaseLogin */,
+				23FA937721D027AF0053B128 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2388B1CB21CED8B700E87667 /* Products */ = {
+		23FA937721D027AF0053B128 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2388B1CA21CED8B700E87667 /* UI_Design.app */,
+				23FA937621D027AF0053B128 /* FirebaseLogin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2388B1CC21CED8B700E87667 /* UI_Design */ = {
+		23FA937821D027AF0053B128 /* FirebaseLogin */ = {
 			isa = PBXGroup;
 			children = (
-				2388B1E321CEE56700E87667 /* ViewController.swift */,
-				230386B521CF4DF600571A18 /* addBackground.swift */,
-				2388B1CD21CED8B700E87667 /* AppDelegate.swift */,
-				23BBC79121CF537300F9A788 /* TableViewController.swift */,
-				2388B1D121CED8B700E87667 /* Main.storyboard */,
-				2388B1D421CED8BB00E87667 /* Assets.xcassets */,
-				2388B1D621CED8BB00E87667 /* LaunchScreen.storyboard */,
-				2388B1E021CEE22100E87667 /* SWRevealViewController.h */,
-				2388B1E121CEE22200E87667 /* SWRevealViewController.m */,
-				2388B1D921CED8BB00E87667 /* Info.plist */,
-				2388B1DF21CEE20F00E87667 /* UI_Design-Bridging-Header.h */,
+				23FA937921D027AF0053B128 /* AppDelegate.swift */,
+				23FA937B21D027AF0053B128 /* ViewController.swift */,
+				23FA937D21D027AF0053B128 /* Main.storyboard */,
+				23FA938021D027B60053B128 /* Assets.xcassets */,
+				23FA938221D027B60053B128 /* LaunchScreen.storyboard */,
+				23FA938521D027B60053B128 /* Info.plist */,
 			);
-			path = UI_Design;
+			path = FirebaseLogin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2388B1C921CED8B700E87667 /* UI_Design */ = {
+		23FA937521D027AF0053B128 /* FirebaseLogin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2388B1DC21CED8BB00E87667 /* Build configuration list for PBXNativeTarget "UI_Design" */;
+			buildConfigurationList = 23FA938821D027B60053B128 /* Build configuration list for PBXNativeTarget "FirebaseLogin" */;
 			buildPhases = (
-				2388B1C621CED8B700E87667 /* Sources */,
-				2388B1C721CED8B700E87667 /* Frameworks */,
-				2388B1C821CED8B700E87667 /* Resources */,
+				23FA937221D027AF0053B128 /* Sources */,
+				23FA937321D027AF0053B128 /* Frameworks */,
+				23FA937421D027AF0053B128 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = UI_Design;
-			productName = UI_Design;
-			productReference = 2388B1CA21CED8B700E87667 /* UI_Design.app */;
+			name = FirebaseLogin;
+			productName = FirebaseLogin;
+			productReference = 23FA937621D027AF0053B128 /* FirebaseLogin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2388B1C221CED8B700E87667 /* Project object */ = {
+		23FA936E21D027AF0053B128 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = 3to1;
 				TargetAttributes = {
-					2388B1C921CED8B700E87667 = {
+					23FA937521D027AF0053B128 = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
 					};
 				};
 			};
-			buildConfigurationList = 2388B1C521CED8B700E87667 /* Build configuration list for PBXProject "UI_Design" */;
+			buildConfigurationList = 23FA937121D027AF0053B128 /* Build configuration list for PBXProject "FirebaseLogin" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,57 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 2388B1C121CED8B700E87667;
-			productRefGroup = 2388B1CB21CED8B700E87667 /* Products */;
+			mainGroup = 23FA936D21D027AF0053B128;
+			productRefGroup = 23FA937721D027AF0053B128 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2388B1C921CED8B700E87667 /* UI_Design */,
+				23FA937521D027AF0053B128 /* FirebaseLogin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2388B1C821CED8B700E87667 /* Resources */ = {
+		23FA937421D027AF0053B128 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2388B1D821CED8BB00E87667 /* LaunchScreen.storyboard in Resources */,
-				2388B1D521CED8BB00E87667 /* Assets.xcassets in Resources */,
-				2388B1D321CED8B700E87667 /* Main.storyboard in Resources */,
+				23FA938421D027B60053B128 /* LaunchScreen.storyboard in Resources */,
+				23FA938121D027B60053B128 /* Assets.xcassets in Resources */,
+				23FA937F21D027AF0053B128 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2388B1C621CED8B700E87667 /* Sources */ = {
+		23FA937221D027AF0053B128 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2388B1E421CEE56700E87667 /* ViewController.swift in Sources */,
-				2388B1CE21CED8B700E87667 /* AppDelegate.swift in Sources */,
-				2388B1E221CEE22200E87667 /* SWRevealViewController.m in Sources */,
-				23BBC79221CF537300F9A788 /* TableViewController.swift in Sources */,
-				230386B621CF4DF600571A18 /* addBackground.swift in Sources */,
+				23FA937C21D027AF0053B128 /* ViewController.swift in Sources */,
+				23FA937A21D027AF0053B128 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2388B1D121CED8B700E87667 /* Main.storyboard */ = {
+		23FA937D21D027AF0053B128 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2388B1D221CED8B700E87667 /* Base */,
+				23FA937E21D027AF0053B128 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2388B1D621CED8BB00E87667 /* LaunchScreen.storyboard */ = {
+		23FA938221D027B60053B128 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2388B1D721CED8BB00E87667 /* Base */,
+				23FA938321D027B60053B128 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -179,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2388B1DA21CED8BB00E87667 /* Debug */ = {
+		23FA938621D027B60053B128 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -240,7 +223,7 @@
 			};
 			name = Debug;
 		};
-		2388B1DB21CED8BB00E87667 /* Release */ = {
+		23FA938721D027B60053B128 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -295,42 +278,37 @@
 			};
 			name = Release;
 		};
-		2388B1DD21CED8BB00E87667 /* Debug */ = {
+		23FA938921D027B60053B128 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BU68NTQF63;
-				INFOPLIST_FILE = UI_Design/Info.plist;
+				INFOPLIST_FILE = FirebaseLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "YimingPan.UI-Design";
+				PRODUCT_BUNDLE_IDENTIFIER = YimingPan.FirebaseLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UI_Design/UI_Design-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		2388B1DE21CED8BB00E87667 /* Release */ = {
+		23FA938A21D027B60053B128 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BU68NTQF63;
-				INFOPLIST_FILE = UI_Design/Info.plist;
+				INFOPLIST_FILE = FirebaseLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "YimingPan.UI-Design";
+				PRODUCT_BUNDLE_IDENTIFIER = YimingPan.FirebaseLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UI_Design/UI_Design-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -339,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2388B1C521CED8B700E87667 /* Build configuration list for PBXProject "UI_Design" */ = {
+		23FA937121D027AF0053B128 /* Build configuration list for PBXProject "FirebaseLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2388B1DA21CED8BB00E87667 /* Debug */,
-				2388B1DB21CED8BB00E87667 /* Release */,
+				23FA938621D027B60053B128 /* Debug */,
+				23FA938721D027B60053B128 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2388B1DC21CED8BB00E87667 /* Build configuration list for PBXNativeTarget "UI_Design" */ = {
+		23FA938821D027B60053B128 /* Build configuration list for PBXNativeTarget "FirebaseLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2388B1DD21CED8BB00E87667 /* Debug */,
-				2388B1DE21CED8BB00E87667 /* Release */,
+				23FA938921D027B60053B128 /* Debug */,
+				23FA938A21D027B60053B128 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2388B1C221CED8B700E87667 /* Project object */;
+	rootObject = 23FA936E21D027AF0053B128 /* Project object */;
 }
