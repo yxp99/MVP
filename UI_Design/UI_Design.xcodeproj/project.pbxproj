@@ -17,6 +17,7 @@
 		23BBC79221CF537300F9A788 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BBC79121CF537300F9A788 /* TableViewController.swift */; };
 		8653111921D2D4AF009B3C49 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653111821D2D4AF009B3C49 /* QuestionViewController.swift */; };
 		8653111B21D2E006009B3C49 /* PlainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653111A21D2E006009B3C49 /* PlainViewController.swift */; };
+		8653111D21D2EE22009B3C49 /* ViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653111C21D2EE22009B3C49 /* ViewControllerHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		23BBC79121CF537300F9A788 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8653111821D2D4AF009B3C49 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		8653111A21D2E006009B3C49 /* PlainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainViewController.swift; sourceTree = "<group>"; };
+		8653111C21D2EE22009B3C49 /* ViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				2388B1E321CEE56700E87667 /* ViewController.swift */,
+				8653111C21D2EE22009B3C49 /* ViewControllerHelper.swift */,
 				230386B521CF4DF600571A18 /* addBackground.swift */,
 				2388B1CD21CED8B700E87667 /* AppDelegate.swift */,
 				23BBC79121CF537300F9A788 /* TableViewController.swift */,
@@ -159,6 +162,7 @@
 				8653111B21D2E006009B3C49 /* PlainViewController.swift in Sources */,
 				2388B1CE21CED8B700E87667 /* AppDelegate.swift in Sources */,
 				8653111921D2D4AF009B3C49 /* QuestionViewController.swift in Sources */,
+				8653111D21D2EE22009B3C49 /* ViewControllerHelper.swift in Sources */,
 				2388B1E221CEE22200E87667 /* SWRevealViewController.m in Sources */,
 				23BBC79221CF537300F9A788 /* TableViewController.swift in Sources */,
 				230386B621CF4DF600571A18 /* addBackground.swift in Sources */,
