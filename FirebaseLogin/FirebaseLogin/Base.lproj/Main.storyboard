@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu View Controller-->
+        <!--View Controller-->
         <scene sceneID="Ipq-qK-1cz">
             <objects>
-                <viewController id="xyO-Iq-tif" customClass="MenuViewController" customModule="FirebaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xyO-Iq-tif" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xii-n0-gXf"/>
                         <viewControllerLayoutGuide type="bottom" id="vOA-u4-6at"/>
@@ -33,7 +33,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoC-ty-djp" customClass="RoundedWhiteButton" customModule="FirebaseApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoC-ty-djp" customClass="RoundedWhiteButton" customModule="FirebaseLogin" customModuleProvider="target">
                                 <rect key="frame" x="24" y="499" width="327" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -47,7 +47,7 @@
                                     <segue destination="KjD-2l-xIP" kind="show" animates="NO" id="nvZ-VI-fBK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vj5-sG-KwS" customClass="RoundedWhiteButton" customModule="FirebaseApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vj5-sG-KwS" customClass="RoundedWhiteButton" customModule="FirebaseLogin" customModuleProvider="target">
                                 <rect key="frame" x="24" y="579" width="327" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -97,7 +97,7 @@
         <!--Login View Controller-->
         <scene sceneID="IFJ-qD-nts">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="KjD-2l-xIP" customClass="LoginViewController" customModule="FirebaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="KjD-2l-xIP" customClass="LoginViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D3Z-LS-ULP"/>
                         <viewControllerLayoutGuide type="bottom" id="iJq-yx-8Hy"/>
@@ -210,7 +210,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="backArrow"/>
                                 <connections>
-                                    <action selector="handleDismissButton:" destination="KjD-2l-xIP" eventType="touchUpInside" id="Sd9-wV-Ir9"/>
+                                    <action selector="handleDismissButton:" destination="KjD-2l-xIP" eventType="touchUpInside" id="GwB-OF-RvN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -233,10 +233,10 @@
             </objects>
             <point key="canvasLocation" x="3540" y="-238"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--View Controller-->
         <scene sceneID="DfF-sQ-he5">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="hGn-DY-xGu" customClass="SignUpViewController" customModule="FirebaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="hGn-DY-xGu" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0sU-ml-kiZ"/>
                         <viewControllerLayoutGuide type="bottom" id="LZ1-OE-zbX"/>
@@ -375,9 +375,6 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="backArrow"/>
-                                <connections>
-                                    <action selector="handleDismissButton:" destination="hGn-DY-xGu" eventType="touchUpInside" id="icC-us-SoZ"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
@@ -394,12 +391,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jvp-ua-Ojz"/>
                     </view>
-                    <connections>
-                        <outlet property="dismissButton" destination="4wP-yK-1OY" id="6oR-iF-Rre"/>
-                        <outlet property="emailField" destination="ViH-p6-LbH" id="XSI-2F-veM"/>
-                        <outlet property="passwordField" destination="VeQ-oo-HhO" id="Fpu-D4-NjE"/>
-                        <outlet property="usernameField" destination="hpw-Nc-yKO" id="yDe-qQ-Cpr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Eh-g2-JSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -408,7 +399,7 @@
         <!--InitialViewController-->
         <scene sceneID="lLI-HW-eYB">
             <objects>
-                <viewController title="InitialViewController" id="laU-OI-koZ" customClass="InitialViewController" customModule="FirebaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="InitialViewController" id="laU-OI-koZ" customClass="InitialViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zhr-c5-gTA"/>
                         <viewControllerLayoutGuide type="bottom" id="uwX-SZ-lEW"/>
@@ -456,7 +447,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backArrow" width="16" height="16"/>
+        <image name="backArrow" width="50" height="50"/>
         <image name="firebaselogo" width="16" height="16"/>
     </resources>
 </document>
