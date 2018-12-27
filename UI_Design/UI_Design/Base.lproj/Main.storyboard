@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ekU-5K-sj1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,9 +37,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <segue destination="eYl-xF-TRf" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="BJf-Pi-Pye"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Kto-2T-CRc">
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -58,9 +55,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <segue destination="PnV-Pe-xlU" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="SDm-cC-4BU"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="y2a-6N-FtS">
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
@@ -141,8 +135,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Legal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pq5-hu-u4D">
-                                                    <rect key="frame" x="16" y="12" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pq5-hu-u4D">
+                                                    <rect key="frame" x="16" y="12" width="61" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -160,6 +154,11 @@
                             <outlet property="delegate" destination="evO-M8-Oux" id="9IQ-eW-OOv"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="eYl-xF-TRf" kind="custom" identifier="playScreenSegue" customClass="SWRevealViewControllerSeguePushController" id="97e-uG-ycE"/>
+                        <segue destination="PnV-Pe-xlU" kind="custom" identifier="smackScreenSegue" customClass="SWRevealViewControllerSeguePushController" id="Xcu-C5-L2E"/>
+                        <segue destination="ekU-5K-sj1" kind="show" identifier="initialScreenSegue" id="1br-Qe-S9x"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ApR-zS-7Vx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -258,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-266" y="121"/>
+            <point key="canvasLocation" x="-1054" y="-499"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Itj-QT-bOl">
@@ -405,12 +404,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Idq-m9-lcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4187.1999999999998" y="1916.9415292353824"/>
+            <point key="canvasLocation" x="-3834" y="1917"/>
         </scene>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="J5w-jE-h2t">
             <objects>
-                <viewController id="ekU-5K-sj1" sceneMemberID="viewController">
+                <viewController id="ekU-5K-sj1" customClass="InitialViewController" customModule="UI_Design" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UHy-cC-F7F"/>
                         <viewControllerLayoutGuide type="bottom" id="AT5-II-PBU"/>
@@ -419,19 +418,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firebase Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh4-Q8-kQ2">
-                                <rect key="frame" x="103.5" y="294.5" width="168" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to 3to1 Sports App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh4-Q8-kQ2">
+                                <rect key="frame" x="28.5" y="294.5" width="318.5" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Replicode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsl-ye-qhb">
-                                <rect key="frame" x="130.5" y="331.5" width="114" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By 3to1 Inc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsl-ye-qhb">
+                                <rect key="frame" x="139.5" y="331.5" width="96" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NG-Vc-JGq" customClass="RoundedWhiteButton" customModule="FirebaseLogin" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NG-Vc-JGq" customClass="RoundedWhiteButton" customModule="UI_Design" customModuleProvider="target">
                                 <rect key="frame" x="24" y="499" width="327" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -445,7 +444,7 @@
                                     <segue destination="v9W-zp-rZf" kind="show" animates="NO" id="8bV-U4-aUw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJB-bq-WHK" customClass="RoundedWhiteButton" customModule="FirebaseLogin" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJB-bq-WHK" customClass="RoundedWhiteButton" customModule="UI_Design" customModuleProvider="target">
                                 <rect key="frame" x="24" y="579" width="327" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -459,10 +458,10 @@
                                     <segue destination="qCH-RF-n47" kind="show" animates="NO" id="HFn-Ya-9Yc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firebaselogo" translatesAutoresizingMaskIntoConstraints="NO" id="ok9-gs-FaV">
-                                <rect key="frame" x="137.5" y="170.5" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3to1 logo white" translatesAutoresizingMaskIntoConstraints="NO" id="ok9-gs-FaV">
+                                <rect key="frame" x="87.5" y="170.5" width="200" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ok9-gs-FaV" secondAttribute="height" multiplier="1:1" id="Wlm-Hv-bmx"/>
+                                    <constraint firstAttribute="width" secondItem="ok9-gs-FaV" secondAttribute="height" multiplier="2:1" id="Wlm-Hv-bmx"/>
                                     <constraint firstAttribute="height" constant="100" id="sNR-K8-e2C"/>
                                 </constraints>
                             </imageView>
@@ -487,15 +486,18 @@
                     <navigationItem key="navigationItem" id="eyP-Wp-oUo">
                         <barButtonItem key="backBarButtonItem" title=" " id="4AM-Rn-pHO"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toHomeScreen" id="kTA-4w-JZz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8WI-gG-sdP" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2734" y="125"/>
+            <point key="canvasLocation" x="-3652" y="-499"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="mJA-3R-4DE">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="v9W-zp-rZf" customClass="LoginViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="v9W-zp-rZf" customClass="LoginViewController" customModule="UI_Design" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d5T-tE-FwT"/>
                         <viewControllerLayoutGuide type="bottom" id="pmA-YE-YAU"/>
@@ -626,15 +628,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i5t-eW-raA"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="0Yg-oe-kV6" id="5PZ-2X-7b5"/>
+                        <outlet property="passwordField" destination="Gvo-ON-wxv" id="1QO-Rn-rOt"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="loginToPlay" id="CBc-0T-FBJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2I-fD-YTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3540" y="-238.83058470764618"/>
+            <point key="canvasLocation" x="-2410" y="-27"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="faf-O4-Th4">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="qCH-RF-n47" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="qCH-RF-n47" customClass="SignupViewController" customModule="UI_Design" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m9i-Wd-vX3"/>
                         <viewControllerLayoutGuide type="bottom" id="vHd-OC-Wtm"/>
@@ -773,6 +780,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="backArrow"/>
+                                <connections>
+                                    <action selector="handleDismissButton:" destination="qCH-RF-n47" eventType="touchUpInside" id="sS5-Fy-NUQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
@@ -792,7 +802,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xbo-a5-RDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3540" y="509"/>
+            <point key="canvasLocation" x="-2410" y="-957"/>
         </scene>
     </scenes>
     <resources>
@@ -806,9 +816,9 @@
         <image name="Miss Ref" width="140" height="214"/>
         <image name="Team Logo Display Box" width="460" height="233"/>
         <image name="backArrow" width="50" height="50"/>
-        <image name="firebaselogo" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iAE-nk-ZFX"/>
+        <segue reference="97e-uG-ycE"/>
+        <segue reference="CBc-0T-FBJ"/>
     </inferredMetricsTieBreakers>
 </document>
